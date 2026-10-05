@@ -4,7 +4,7 @@ import redis
 app = Flask(__name__)
 r = redis.Redis(host='redis', port=6379)
 
-app@.route('/')  
+@app.route('/')  
 def welcome():
     count = r.incr('hits')
     return 'welcome to the coderco container challenge!' 
